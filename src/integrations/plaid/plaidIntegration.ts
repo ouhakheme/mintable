@@ -226,7 +226,7 @@ export class PlaidIntegration {
                     integration: IntegrationId.Plaid,
                     name: transaction.name,
                     date: parseISO(transaction.date),
-                    amount: transaction.amount,
+                    amount: transaction.amount * -1,
                     currency: transaction.iso_currency_code || transaction.unofficial_currency_code,
                     type: transaction.transaction_type,
                     accountId: transaction.account_id,
